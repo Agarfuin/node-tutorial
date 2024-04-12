@@ -1,0 +1,1 @@
+This is promisified async await writeFile: first = Hello this is first text file, and second = Hello this is second text file

@@ -1,5 +1,6 @@
 // HTTP Module
 
+//Regular http module
 const http = require('http');
 
 const server = http.createServer((req, res) => {
@@ -18,4 +19,11 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(8080);
+// With using event emitter api
+server.on('request', (req, res) => {
+    res.end('Welcome');
+});
+
+server.listen(8080, () => {
+    console.log("Server listening on port: 8080...");
+});
